@@ -9,7 +9,8 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            NoteTaker form2 = new NoteTaker();
+            form2.Show();
         }
     }
 }

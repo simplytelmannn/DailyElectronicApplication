@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            previousNOTES = new DataGridView();
+            previousNotes = new DataGridView();
             titleBox = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -37,26 +37,26 @@
             deleteButton = new Button();
             saveButton = new Button();
             newNoteButton = new Button();
-            ((System.ComponentModel.ISupportInitialize)previousNOTES).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)previousNotes).BeginInit();
             SuspendLayout();
             // 
-            // previousNOTES
+            // previousNotes
             // 
-            previousNOTES.BackgroundColor = Color.WhiteSmoke;
-            previousNOTES.BorderStyle = BorderStyle.None;
-            previousNOTES.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            previousNOTES.Location = new Point(12, 12);
-            previousNOTES.Name = "previousNOTES";
-            previousNOTES.RowHeadersWidth = 51;
-            previousNOTES.RowTemplate.Height = 29;
-            previousNOTES.Size = new Size(404, 388);
-            previousNOTES.TabIndex = 0;
+            previousNotes.BackgroundColor = Color.WhiteSmoke;
+            previousNotes.BorderStyle = BorderStyle.None;
+            previousNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            previousNotes.Location = new Point(12, 12);
+            previousNotes.Name = "previousNotes";
+            previousNotes.RowHeadersWidth = 51;
+            previousNotes.RowTemplate.Height = 29;
+            previousNotes.Size = new Size(404, 388);
+            previousNotes.TabIndex = 0;
+            previousNotes.CellContentClick += previousNotes_CellContentClick;
             // 
             // titleBox
             // 
-            titleBox.AutoSize = true;
             titleBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            titleBox.Location = new Point(426, 9);
+            titleBox.Location = new Point(422, 9);
             titleBox.Name = "titleBox";
             titleBox.Size = new Size(44, 20);
             titleBox.TabIndex = 1;
@@ -89,10 +89,10 @@
             loadButton.TabIndex = 4;
             loadButton.Text = "Load";
             loadButton.UseVisualStyleBackColor = false;
+            loadButton.Click += loadButton_Click;
             // 
             // noteBox
             // 
-            noteBox.AutoSize = true;
             noteBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             noteBox.Location = new Point(422, 66);
             noteBox.Name = "noteBox";
@@ -110,6 +110,7 @@
             deleteButton.TabIndex = 6;
             deleteButton.Text = "Delete";
             deleteButton.UseVisualStyleBackColor = false;
+            deleteButton.Click += deleteButton_Click;
             // 
             // saveButton
             // 
@@ -121,6 +122,7 @@
             saveButton.TabIndex = 7;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = false;
+            saveButton.Click += saveButton_Click;
             // 
             // newNoteButton
             // 
@@ -132,6 +134,7 @@
             newNoteButton.TabIndex = 8;
             newNoteButton.Text = "New Note";
             newNoteButton.UseVisualStyleBackColor = false;
+            newNoteButton.Click += newNoteButton_Click;
             // 
             // NoteTaker
             // 
@@ -147,18 +150,18 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(titleBox);
-            Controls.Add(previousNOTES);
+            Controls.Add(previousNotes);
             Name = "NoteTaker";
             Text = "Note Taker";
             Load += NoteTaker_Load;
-            ((System.ComponentModel.ISupportInitialize)previousNOTES).EndInit();
+            ((System.ComponentModel.ISupportInitialize)previousNotes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView previousNOTES;
+        private DataGridView previousNotes;
         private Label titleBox;
         private TextBox textBox1;
         private TextBox textBox2;
